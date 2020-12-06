@@ -1,0 +1,9 @@
+main: me.lst.recordplus.RecordPlusPlugin
+name: RecordPlus
+version: 1.0.0
+author: LST
+
+commands:
+  record:
+    description: Record command
+    aliases: [recordplus, rec]

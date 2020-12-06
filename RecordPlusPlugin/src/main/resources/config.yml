@@ -1,0 +1,6 @@
+verbose: true
+round-decimals: true
+record-nearby: true
+record-nearby-distance-horizontal: 8.0
+record-nearby-distance-vertical: 8.0
+playback-distance-required: 25.0
