@@ -34,7 +34,7 @@ public class StringUtils {
 
     public static String random(int characters) {
         if (characters <= 0) {
-            throw new IndexOutOfBoundsException("Minimum character length is 0!");
+            throw new IndexOutOfBoundsException("Minimum character length is 1!");
         }
         if (characters > 32) {
             throw new IndexOutOfBoundsException("Character length cannot exceed 32!");
