@@ -6,9 +6,9 @@ Currently supports Spigot versions 1.16.3 - 1.16.4. It does not depend on any pl
 View commands in-game with /rec
 
 # Permissions
-/rec reload - commands.record.reload
-/rec start - commands.record.start
-/rec stop - commands.record.stop
-/rec show - commands.record.show
-/rec play - commands.record.play
+/rec reload - commands.record.reload\
+/rec start - commands.record.start\
+/rec stop - commands.record.stop\
+/rec show - commands.record.show\
+/rec play - commands.record.play\
 /rec delete - commands.record.delete
