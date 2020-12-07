@@ -215,7 +215,7 @@ public abstract class Recorder implements Listener {
         if (isNew) {
             recording = new Recording();
             recording.date = System.currentTimeMillis();
-            recording.id = UUID.randomUUID().toString().replace("-", "").substring(0, 8);
+            recording.id = StringUtils.random(8);
             recording.targetLocation = locationString;
 
             recording.entities = new ArrayList<>();
