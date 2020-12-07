@@ -1,7 +1,7 @@
 # RecordPlus
 Record entities in game and their actions and neighbors. Currently does not support block-related actions.
 
-Currently supports Spigot versions 1.16.3 - 1.16.4. It does not depend on any plugin.
+Currently supports Spigot versions 1.16.1 - 1.16.4. It does not depend on any plugin.
 
 View commands in-game with /rec
 
