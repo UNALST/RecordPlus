@@ -35,6 +35,7 @@ public class EntityMappings {
         TYPE_IDS.put("HORSE", 33);
         TYPE_IDS.put("HUSK", 34);
         TYPE_IDS.put("ILLUSIONER", 35);
+        TYPE_IDS.put("IRON_GOLEM", 36);
         TYPE_IDS.put("LLAMA", 42);
         TYPE_IDS.put("LLAMA_SPIT", 43);
         TYPE_IDS.put("MAGMA_CUBE", 44);

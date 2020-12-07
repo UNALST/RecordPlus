@@ -38,7 +38,7 @@ public class PlayCommand extends Command {
         }
         OfflinePlayer player = Bukkit.getOfflinePlayer(args[0]);
 
-        if (!player.hasPlayedBefore()) {
+        if (player.getFirstPlayed() == 0) {
             sender.sendMessage(StringUtils.format("&cPlayer '%s' was not found!", args[0]));
             return;
         }

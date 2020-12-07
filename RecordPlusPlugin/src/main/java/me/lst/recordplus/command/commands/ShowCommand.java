@@ -6,6 +6,7 @@ import me.lst.recordplus.util.IntegerUtils;
 import me.lst.recordplus.util.NumberUtils;
 import me.lst.recordplus.util.StringUtils;
 import me.lst.recordplus.util.command.Command;
+import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.HoverEvent;
 import net.md_5.bungee.api.chat.TextComponent;
@@ -32,7 +33,7 @@ public class ShowCommand extends Command {
     public void run(CommandSender sender, String parentLabel, String label, String[] args) {
         OfflinePlayer player = Bukkit.getOfflinePlayer(args[0]);
 
-        if (!player.hasPlayedBefore()) {
+        if (player.getFirstPlayed() == 0) {
             sender.sendMessage(StringUtils.format("&cPlayer '%s' was not found!", args[0]));
             return;
         }
@@ -67,7 +68,7 @@ public class ShowCommand extends Command {
             if (sender instanceof Player) {
                 TextComponent message = new TextComponent(text);
                 message.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, StringUtils.format("/rec play %s %s", username, recording.id)));
-                message.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new Text("Click to play")));
+                message.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new BaseComponent[] { new TextComponent("Click to play") }));
                 ((Player) sender).spigot().sendMessage(message);
             } else {
                 sender.sendMessage(text);
