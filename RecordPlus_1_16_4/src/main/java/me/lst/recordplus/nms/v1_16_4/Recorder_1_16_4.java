@@ -208,15 +208,12 @@ public class Recorder_1_16_4 extends Recorder {
 
     @Override
     public void applySkin(Player player, EntityTracker tracker) {
-        String skin = null;
-
         Iterator<Property> iterator = ((CraftPlayer) player).getHandle().getProfile().getProperties().get("textures").iterator();
 
         if (iterator.hasNext()) {
             Property property = iterator.next();
-            skin = property.getValue() + '\0' + property.getSignature();
+            tracker.skin = property.getValue() + '\0' + property.getSignature();
         }
-        tracker.skin = skin;
     }
 
     @Override
